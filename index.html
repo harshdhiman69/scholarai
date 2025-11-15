@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScholarAI - Your AI Study Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+</head>
+<body>
+  <div class="stars"></div>
+  
+  <main class="homepage-container">
+    <div class="hero-section">
+      <h1 class="main-title">ScholarAI</h1>
+      <p class="subtitle">Your Intelligent Study Companion</p>
+      <p class="description">Powered by Google Gemini for comprehensive, detailed analysis and explanations</p>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card active" onclick="location.href='{{ url_for('summarize_page') }}'">
+        <div class="feature-icon">📖</div>
+        <h3>AI Summarizer</h3>
+        <p>Get comprehensive, detailed summaries powered by Gemini that maintain educational value and explain concepts thoroughly</p>
+        <div class="feature-tech">Google Gemini</div>
+      </div>
+      
+      <div class="feature-card active" onclick="location.href='{{ url_for('quiz_page') }}'">
+        <div class="feature-icon">📝</div>
+        <h3>Quiz Generator</h3>
+        <p>Generate practice quizzes and tests from your study materials automatically with instant feedback</p>
+        <div class="feature-tech">Google Gemini</div>
+      </div>
+      
+      <div class="feature-card active" onclick="location.href='{{ url_for('flowchart_page') }}'">
+        <div class="feature-icon">🔄</div>
+        <h3>Flowchart Creator</h3>
+        <p>Visualize complex concepts and processes with AI-generated flowcharts powered by Graphviz</p>
+        <div class="feature-tech">Gemini + Graphviz</div>
+      </div>
+    </div>
+    
+    <div class="info-section">
+      <div class="info-card">
+        <h4>🚀 Powered by Google Gemini</h4>
+        <p>Experience next-level AI summarization with Google's Gemini 1.5 Flash model, providing detailed, comprehensive explanations that maintain educational context and depth.</p>
+      </div>
+      
+      <div class="info-card">
+        <h4>🎯 How to Get Started</h4>
+        <p>Click on the AI Summarizer card above to start analyzing your documents, research papers, or study materials with the power of Google Gemini!</p>
+      </div>
+    </div>
+  </main>
+  
+  <footer class="footer">
+    <p>&copy; 2025 ScholarAI - Enhanced with Google Gemini for Superior Educational AI</p>
+  </footer>
+</body>
+</html>
